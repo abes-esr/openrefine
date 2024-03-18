@@ -1,0 +1,14 @@
+version: '3'
+services:
+#Mofidier nom du projet
+    openrefine-nomduprojet:
+#Adapter l'image à la dernière version
+        image: abes/openrefine376
+        volumes:
+            - ./volumes/refine-projet:/mnt/refine
+        ports:
+        #modifier le port (voir les ports "hauts")
+            - "3333:3333"
+        env_file:
+            - openrefine.env
+        restart: unless-stopped
