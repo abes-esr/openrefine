@@ -6,7 +6,7 @@ MAINTAINER sire@abes.fr
 RUN apt-get update && apt-get install -y wget bash
 
 ARG RELEASE=3.7.6
-ARG MEMORY='5000m'
+ARG MEMORY='4500m'
 ENV RELEASE=$RELEASE
 ENV REFINE_MEMORY=$MEMORY
 
