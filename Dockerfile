@@ -15,7 +15,9 @@ RUN tar -xzf openrefine-linux-$RELEASE.tar.gz  && rm openrefine-linux-$RELEASE.t
 RUN mkdir /mnt/refine
 VOLUME /mnt/refine
 EXPOSE 3333
+RUN ln -s /openrefine-$RELEASE openrefine
 CMD openrefine-$RELEASE/refine -i 0.0.0.0 -d /mnt/refine -m $REFINE_MEMORY
+ 
 
 #Reference:
 
