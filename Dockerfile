@@ -1,11 +1,11 @@
 #Java version
-FROM openjdk:11-jre
+FROM openjdk:11-jre as openrefine-image
 MAINTAINER sire@abes.fr
 
 #Download a couple of required packages
 RUN apt-get update && apt-get install -y wget bash
 
-ARG RELEASE=3.7.6
+ARG RELEASE=3.8.5
 ARG MEMORY='4500m'
 ENV RELEASE=$RELEASE
 ENV REFINE_MEMORY=$MEMORY
