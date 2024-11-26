@@ -3,7 +3,7 @@ FROM openjdk:11-jre as openrefine-image
 MAINTAINER sire@abes.fr
 
 #Download a couple of required packages
-RUN apt-get update && apt-get install -y wget bash
+RUN apt-get update && apt-get install -y wget bash free
 
 ARG RELEASE=3.8.6
 ARG MEMORY='4500m'
