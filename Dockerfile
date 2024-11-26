@@ -5,7 +5,7 @@ MAINTAINER sire@abes.fr
 #Download a couple of required packages
 RUN apt-get update && apt-get install -y wget bash
 
-ARG RELEASE=3.8.5
+ARG RELEASE=3.8.6
 ARG MEMORY='4500m'
 ENV RELEASE=$RELEASE
 ENV REFINE_MEMORY=$MEMORY
