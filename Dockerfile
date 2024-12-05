@@ -6,7 +6,7 @@ MAINTAINER sire@abes.fr
 RUN apt-get update && apt-get install -y wget bash procps
 
 ARG RELEASE=3.8.7
-ARG MEMORY='4500m'
+#ARG MEMORY='4500m'
 ENV RELEASE=$RELEASE
 ENV REFINE_MEMORY=$MEMORY
 
