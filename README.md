@@ -4,7 +4,7 @@
 
 Pour commencer, ceci est encore une autre image docker d'openrefine que l'on peut trouver sur le web. Cependant il s'agit du dépôt permettant de générer les images openrefine de l'ABES qui sont utilisées pour le projet Refabes-docker  [Refabes-Docker](https://github.com/abes-esr/refabes-docker) .
 
-##Entrypoint
+## Entrypoint
 
 Cette image, contient un script entrypoint.sh permettant de variabiliser la mémoire qu'openrefine pourra utiliser : "REFINE_MEMORY"
 
