@@ -6,7 +6,7 @@ MAINTAINER sire@abes.fr
 RUN apt-get update && apt-get install -y wget bash procps
 
 #ARG à changer à chaque monter de version
-ARG RELEASE
+ARG RELEASE='3.9.3'
 #ARG MEMORY='4500m'
 ENV RELEASE=$RELEASE
 ENV REFINE_MEMORY=$MEMORY
