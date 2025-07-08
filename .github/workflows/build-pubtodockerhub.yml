@@ -21,10 +21,19 @@ jobs:
 
       - name: "Build: checkout source code"
         uses: actions/checkout@v2
+      
+      - name: "Lire le fichier .version"
+        id: get_version
+        run: echo "VERSION=$(cat .version)" >> $GITHUB_ENV
+
+      - name: "Affichier version"
+        run: echo "La version est $VERSION"
+      
       - name: "Build: build docker image"
         run: |
           #docker build . -t localimage:latest
-          docker build --build-arg RELEASE=${{ env.RELEASE }} -t localimage:latest .
+          docker build --build-arg RELEASE=${{ env.VERSION }} -t localimage:latest .
+          
       - name: "Push: prepare version from git tags/branchs"
         id: docker_tag_meta
         uses: docker/metadata-action@v3
